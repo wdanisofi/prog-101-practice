@@ -53,28 +53,11 @@
 }
 
 /* Make column items show differing intrinsic inline sizes and font sizes */
-
-/* Base style for each flex item */
-.main__div {
-  width: 200px;
-
-  /* do not force a fixed height so stretch can work */
-  padding: 0.25rem;
-  text-align: center;
-  background-color: coral;
-  border: solid 4px rgb(255 255 255 / 70%);
-}
-
 .main--column .main__div {
   /* remove width so stretch can act; cards have content-driven width */
   width: auto;
   padding: 0.5rem 0.75rem;
   margin: 0.25rem 0;
-}
-
-/* Labels inside items (we'll change font sizes for baseline demo) */
-.label {
-  display: inline-block;
 }
 
 .main--column-baseline .main__div:nth-child(1) .label {
@@ -89,11 +72,25 @@
   font-size: 3rem;
 }
 
+/* Base style for each flex item */
+.main__div {
+  width: 200px;
+  padding: 0.25rem;
+  text-align: center;
+  background-color: coral;
+  border: solid 4px rgb(255 255 255 / 70%);
+}
+
 /* For the stretch demo we center the content inside each stretched item */
 .main--stretch .main__div {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Labels inside items (we'll change font sizes for baseline demo) */
+.label {
+  display: inline-block;
 }
 
 /* Different intrinsic heights for visual contrast (stretch demo) */
