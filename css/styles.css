@@ -12,14 +12,18 @@ body {
 }
 
 .header__return-home {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   max-width: 120px;
+  height: 2rem;
   margin-bottom: 1rem;
   font-weight: bold;
-  color: #233;
+  color: #524f4f;
   text-align: center;
   text-decoration: none;
   background-color: salmon;
+  border: solid 1px #fff;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
 }

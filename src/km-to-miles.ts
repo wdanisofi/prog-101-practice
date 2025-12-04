@@ -14,19 +14,26 @@ function convertKMtoMI(km: number): string {
 
 // ✅ Esperamos a que el DOM esté listo
 document.addEventListener('DOMContentLoaded', () => {
+  // Accionar con el formulario
   const form = document.getElementById('conversionForm') as HTMLFormElement;
 
+  // Accionar con el botón que tiene submit
   form.addEventListener('submit', function (event) {
     // ✅ Prevenimos el comportamiento por defecto del formulario
     event.preventDefault();
 
+    // Capturar el dato de kilometros --> const km para parsearlo
     const kmInput = document.getElementById('kmInput') as HTMLInputElement;
+
+    // Parsear el dato "número" de kmInput --> que pasa a la función convertKMtoMI()
+    const km: number = parseFloat(kmInput.value);
+
+    // Capturar el campo donde devolvera el resultado
     const resultOutput = document.getElementById(
       'resultOutput'
     ) as HTMLDivElement;
 
-    const km: number = parseFloat(kmInput.value);
-
+    // Recibe la respuesta de convertKMtoMI()
     resultOutput.textContent = convertKMtoMI(km);
   });
 });
