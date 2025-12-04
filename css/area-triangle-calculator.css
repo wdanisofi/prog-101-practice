@@ -32,11 +32,11 @@ body {
 }
 
 .form__content {
-  display: inline-block;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
   width: 70%;
-
-  /* background-color: rgba(128, 0, 255, 0.377); */
-  margin: 0 auto;
 }
 
 .form__input {
